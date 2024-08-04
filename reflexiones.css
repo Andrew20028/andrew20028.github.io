@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #51add5;
+}
+
+header {
+    background: url('imagenes/portada.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header .menu-icon {
+    width: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.info-section {
+    background: #ed980f;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.poem-container {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #333;
+    box-shadow: 0 0 10px rgb(121, 1, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poem-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.poem-image {
+    border-radius: 50%;
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: 150px; /* Ajusta el tamaño según sea necesario */
+    object-fit: cover;
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.poem-container h1, .poem-container h2, .poem-container p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.poem-container p {
+    font-size: 18px;
+}
+
+.footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    .navbar {
+        display: none;
+        width: 100%;
+        background-color: #e67e22;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px 0;
+    }
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    #menu:checked + label + .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .poem-container {
+        padding: 10px;
+    }
+
+    .poem-image {
+        width: 120px; /* Ajusta el tamaño según sea necesario */
+        height: 120px; /* Ajusta el tamaño según sea necesario */
+        margin-bottom: 10px;
+    }
+}

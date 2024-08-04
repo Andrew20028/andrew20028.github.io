@@ -1,0 +1,159 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background: url('imagenes/portada.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: auto;
+}
+
+.menu-icon {
+    width: 30px;
+    display: none;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.info-section {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.info-section h1 {
+    font-size: 36px;
+    color: #ff6600;
+}
+
+.info-section h2 {
+    font-size: 28px;
+    color: #00aaff;
+}
+
+.info-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.info-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.info-images img {
+    width: calc(50% - 10px);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.info-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background: #ff6600;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.aliado {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.aliado h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.aliado img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.main-content {
+    flex-direction: column;
+}
+
+.info-section {
+    margin-right: 0;
+}
+    .menu-icon {
+        display: block;
+    }
+    .navbar {
+        display: none;
+        width: 100%;
+        background-color: #e67e22;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px 0;
+    }
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    #menu:checked + label + .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+}
